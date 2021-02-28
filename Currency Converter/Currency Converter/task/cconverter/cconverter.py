@@ -1,6 +1,9 @@
-# write your code here!
-rates = {"RUB": 2.98, "ARS": 0.82, "HNL": 0.17, "AUD": 1.9622, "MAD": 0.208}
-conicoins = float(input())
+import requests
+import json
 
-for code, rate in rates.items():
-    print(f"I will get {rate * conicoins:.2f} {code} from the sale of {conicoins} conicoins.")
+code = input().lower()
+url = f'http://www.floatrates.com/daily/{code}.json'
+response = requests.get(url)
+data = json.loads(response.text)
+print(data['usd'])
+print(data['eur'])
