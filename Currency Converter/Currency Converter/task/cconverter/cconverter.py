@@ -1,7 +1,6 @@
 # write your code here!
-conicoins = int(input("Please, enter the number of conicoins you have:"))
-rate = float(input("Please, enter the exchange rate:"))
-dollars = rate * conicoins
-print(f"The total amount of dollars: {dollars}")
+rates = {"RUB": 2.98, "ARS": 0.82, "HNL": 0.17, "AUD": 1.9622, "MAD": 0.208}
+conicoins = float(input())
 
-
+for x in rates:
+    print(f"I will get {rates[x] * conicoins:.2f} {x} from the sale of {conicoins} conicoins.")
