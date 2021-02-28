@@ -17,7 +17,7 @@ class TestStage2(StageTest):
         return list_tests
 
     def check(self, reply: str, attach) -> CheckResult:
-        reply_parsed = reply.strip().split('\n')
+        reply_parsed = reply.strip().splitlines()
         if len(reply_parsed) != 3:
             return CheckResult.wrong("Check your output")
         first_parsed = reply_parsed[0].split()
