@@ -8,10 +8,19 @@ What a great name you have, {name}!
 Let me guess your age.
 Enter remainders of dividing your age by 3, 5 and 7.''')
 
-# reading all remainders
+rem3 = int(input())
+rem5 = int(input())
+rem7 = int(input())
 
-remainder3 = int(input())
-remainder5 = int(input())
-remainder7 = int(input())
-your_age = (remainder3 * 70 + remainder5 * 21 + remainder7 * 15) % 105
-print(f"Your age is {your_age}; that's a good time to start programming!")
+age = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105
+
+print(f"""Your age is {age}; that's a good time to start programming!
+Now I will prove to you that I can count to any number you want.""")
+
+# read a number and count to it here
+number = int(input())
+counter = 0
+while counter <= number:
+    print(str(counter) + " !")
+    counter += 1
+print('Completed, have a nice day!')
