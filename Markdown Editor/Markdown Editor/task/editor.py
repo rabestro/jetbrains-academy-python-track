@@ -11,3 +11,7 @@ while True:
         break
     elif command not in supported_formatters:
         print('Unknown formatting type or command. Please try again')
+
+    if command == 'header':
+        level = int(input('- Level:'))
+        pass
